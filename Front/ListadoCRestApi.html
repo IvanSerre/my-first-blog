@@ -1,0 +1,11 @@
+<html ng-app="ModuloResidentes">
+ <head>
+  <script type="text/javascript" src="lib/angular.min.js"></script>
+  <script type="text/javascript" src="controllers/GesResiApiRes.js"></script>
+ </head>
+ <body ng-controller="Residentes as objresidentes">
+  <div ng-repeat="residente in objresidentes.inforesidente">
+    <div>{{residente.rut}}<div>
+  </div>
+ </body>
+</html>

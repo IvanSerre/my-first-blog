@@ -1,0 +1,50 @@
+<html ng-app="ModuloResidentes">
+<head></head>
+ <body ng-controller="Residentes as objresidentes">
+
+   <div ng-repeat="residente in objresidentes.inforesidente">
+    <div ng-hide="residente.Nohabitado">
+     <div>{{residente.name}}</div>
+     <div>{{residente.description}}</div>
+     <div>{{residente.dpto}}</div>
+     <button ng-show="residente.puedeFirmar">Firmar</button>
+
+      <ul>
+       <div ng-repeat="reclamo in residente.reclamos">
+        <li>
+         <h3>{{reclamo.fecha}}</h3>
+         <spam>{{reclamo.description}}</spam>
+        </li>
+       </div>
+      </ul>
+
+      <form name="reviewForm">
+       <ul>
+       	<li>
+         <blockquote>
+          <h3>{{reclamo.fecha}}</h3>
+          <spam>{{reclamo.description}}</spam>
+         </blockquote>
+        </li>
+      </ul>
+
+       <h4>Enviar un comentario</h4>
+       <fieldset class="form-group">
+         <textarea ng-model="reclamo.description" placeholder="Escribe un comentario sobre el curso" title="reclamo"></textarea>
+       </fieldset>
+
+       <fieldset>
+         <input ng-model="reclamo.fecha" placeholder="Dia-Mes-Año" title="Fecha" />
+       </fieldset>
+
+       <fieldset>
+         <input type="submit" value="Enviar comentario" />
+       </fieldset>
+     </form>
+
+   </div>
+  </div>
+  <script type="text/javascript" src="lib/angular.min.js"></script>
+  <script type="text/javascript" src="controllers/app.js"></script>
+ </body>
+</html>
