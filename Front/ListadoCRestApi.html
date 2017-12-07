@@ -1,5 +1,14 @@
-<script>
-<!--
-document.write(unescape("%3Cscript%3E%0A%3C%21--%0Adocument.write%28unescape%28%22%3Chtml%20ng-app%3D%22ModuloResidentes%22%3E%0A%20%3Chead%3E%0A%20%20%3Cscript%20type%3D%22text/javascript%22%20src%3D%22lib/angular.min.js%22%3E%3C/script%3E%0A%20%20%3Cscript%20type%3D%22text/javascript%22%20src%3D%22controllers/GesResiApiRes.js%22%3E%3C/script%3E%0A%20%3C/head%3E%0A%20%3Cbody%20ng-controller%3D%22Residentes%20as%20objresidentes%22%3E%0A%20%20%3Cdiv%20ng-repeat%3D%22residente%20in%20objresidentes.inforesidente%22%3E%0A%20%20%20%3Cdiv%3E%7B%7Bresidente.rut%7D%7D%3Cdiv%3E%0A%20%20%20%3Cdiv%3E%7B%7Bresidente.nombre%7D%7D%3Cdiv%3E%0A%20%20%20%3Cdiv%3E%7B%7Bresidente.apellidomaterno%7D%7D%3Cdiv%3E%0A%20%20%20%3C/br%3E%0A%20%20%3C/div%3E%0A%20%3C/body%3E%0A%3C/html%3E%0A%22%29%29%3B%0A//--%3E%0A%3C/script%3E"));
-//-->
-</script>
+<html ng-app="ModuloResidentes">
+ <head>
+  <script type="text/javascript" src="lib/angular.min.js"></script>
+  <script type="text/javascript" src="controllers/GesResiApiRes.js"></script>
+ </head>
+ <body ng-controller="Residentes as objresidentes">
+  <div ng-repeat="residente in objresidentes.inforesidente">
+   <div>{{residente.rut}}<div>
+   <div>{{residente.nombre}}<div>
+   <div>{{residente.apellidomaterno}}<div>
+   </br>
+  </div>
+ </body>
+</html>
